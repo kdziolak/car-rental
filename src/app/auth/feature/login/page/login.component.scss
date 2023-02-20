@@ -1,0 +1,12 @@
+@media screen and (min-width: 600px) {
+  .center-login {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@import 'primeflex/primeflex.scss';
+
+.mybutton {
+  @include styleclass('bg-blue-500 text-white hover:bg-blue-600 border-round transition-colors transition-duration-150 p-3 border-none');
+}

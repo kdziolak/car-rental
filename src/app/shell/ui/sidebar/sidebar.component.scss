@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+:host ::ng-deep .p-menu {
+  width: 20.5rem;
+  height: 100%;
+}

@@ -1,0 +1,31 @@
+<p-dialog
+  [(visible)]="isVisible"
+  [header]="header"
+  [style]="{ width: '450px' }"
+  [draggable]="draggable"
+  [modal]="true"
+  styleClass="p-fluid"
+  (onHide)="close()"
+>
+  <ng-template
+    [ngTemplateOutlet]="formTemplate"
+    [ngTemplateOutletContext]="{ $implicit: wasSended }"
+  >
+  </ng-template>
+  <button
+    pButton
+    type="button"
+    label="Cancel"
+    class="p-button-danger"
+    (click)="onCancelForm()"
+  ></button>
+  <button
+    pButton
+    type="button"
+    label="Send"
+    class="p-button-success"
+    (click)="onSendForm()"
+  ></button>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>

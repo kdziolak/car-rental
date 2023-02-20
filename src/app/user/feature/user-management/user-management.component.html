@@ -1,0 +1,52 @@
+<form [formGroup]="formData">
+  <div class="grid p-fluid">
+    <div class="col-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input
+          type="text"
+          formControlName="firstname"
+          pInputText
+          placeholder="Firstname"
+        />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input
+          type="text"
+          formControlName="surname"
+          pInputText
+          placeholder="Surname"
+        />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Email</span>
+        <input
+          type="email"
+          pInputText
+          formControlName="email"
+          placeholder="Email"
+        />
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">Password</span>
+        <input
+          type="password"
+          pInputText
+          formControlName="password"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+  </div>
+</form>
+
+<ng-content></ng-content>

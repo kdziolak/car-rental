@@ -1,0 +1,24 @@
+<section class="flex flex-column h-full">
+  <div class="h-6rem">
+    <p-menubar class="h-full">
+      <ng-template pTemplate="start">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/primeng.svg"
+          height="40"
+          class="mr-2"
+        />
+      </ng-template>
+      <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" />
+        <button pButton label="Logout" icon="pi pi-power-off"></button>
+      </ng-template>
+    </p-menubar>
+  </div>
+
+  <div class="grid flex-grow-1">
+    <app-sidebar class="md:col-2"></app-sidebar>
+    <div class="col-12 md:col-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

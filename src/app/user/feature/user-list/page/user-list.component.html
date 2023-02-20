@@ -1,0 +1,33 @@
+<section *ngIf="users$ | async as users">
+  <p-toolbar styleClass="p-mb-4">
+    <ng-template pTemplate="left"
+      ><button
+        pButton
+        pRipple
+        [label]="'New'"
+        icon="pi pi-plus"
+        class="p-button-success p-mr-2"
+        (click)="addNewUser()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        [label]="'Delete'"
+        icon="pi pi-trash"
+        class="p-button-danger"
+      ></button
+    ></ng-template>
+    <ng-template pTemplate="right"></ng-template>
+  </p-toolbar>
+
+  <app-table [rowData]="users" [cols]="cols"></app-table>
+  <app-dialog
+    [isVisible]="isDialogOpen"
+    (onHide)="closeDialog()"
+    [header]="'Add new user'"
+  >
+    <ng-template let-wasSended>
+      <app-user-management [clickedBtnSend]="wasSended"></app-user-management>
+    </ng-template>
+  </app-dialog>
+</section>

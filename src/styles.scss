@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 10px;
+}
+
+span,
+p,
+div {
+  font-size: 1.6rem;
+}
+
+body {
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+  }
+
+  font-family: "Roboto",
+  sans-serif;
+  height: 100%;
+  letter-spacing: 0px;
+  font-size: 1.6rem;
+  color: #555555;
+  font-weight: 400;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
